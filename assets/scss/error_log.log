@@ -1,0 +1,10 @@
+04/16/23 11:21:19: style.scss - Undefined variable $whihte: ./_calculator.scss on line 65, at column 17
+Call Stack:
+#0 import ./_calculator.scss style.scss on line 8
+04/16/23 11:21:31: style.scss - Undefined variable $whihte: ./_calculator.scss on line 65, at column 17
+Call Stack:
+#0 import ./_calculator.scss style.scss on line 8
+04/16/23 11:22:03: style.scss - Undefined variable $link-gray: ./_navbar.scss on line 17, at column 11
+Call Stack:
+#0 import ./_navbar.scss style.scss on line 5
+04/16/23 11:22:18: style.scss - parse error: failed at `color: $p-light-blue:;` /home/a/alexkuyp/test.alexkuyp.beget.tech/public_html/wp-content/themes/cryptotrading/assets/scss/./_calculator.scss on line 65, at column 17

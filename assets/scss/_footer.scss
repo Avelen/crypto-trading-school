@@ -1,0 +1,45 @@
+footer{
+  padding: 70px 0;
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include md {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+  }
+
+  .footer-item{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17.7398px;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    color: $p-light-gray;
+
+    .nav{
+      display: flex;
+      gap: 30px;
+
+      .menu-item {
+        a {
+          color: $link-gray;
+          transition: 0.3s;
+
+          &:hover {
+            color: $main-yellow;
+          }
+        }
+      }
+    }
+
+    @include md {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+}

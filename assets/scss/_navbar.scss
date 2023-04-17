@@ -1,0 +1,121 @@
+.navbar {
+  &-header {
+    display: none;
+
+    @include md {
+      display: block;
+    }
+
+    .mobile-menu-btn{
+      width: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+
+      .icon-bar{
+        height: 2px;
+        display: block;
+        width: 100%;
+        background-color: $link-gray;
+        transition: 0.3s;
+      }
+
+      &.active{
+        .icon-bar{
+
+          &:first-child{
+            margin-top: 7px;
+            transform: rotate(45deg);
+          }
+          &:last-child{
+            margin-top: -9px;
+            transform: rotate(-45deg);
+          }
+          &:nth-child(2){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-links {
+    .nav {
+      display: flex;
+      gap: 20px;
+
+      @include md {
+        flex-direction: column;
+      }
+
+      .menu-item {
+        a {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 16px;
+          color: $link-gray;
+          transition: 0.3s;
+
+          &:hover {
+            color: $main-yellow;
+          }
+        }
+      }
+    }
+
+    @include md {
+      display: none;
+      position: absolute;
+      background: $white;
+      z-index: 1;
+      padding: 30px;
+      right: 20px;
+      top: 30px;
+      box-shadow: 2px 3px 7px $link-gray;
+
+      &.active{
+        display: block;
+      }
+    }
+  }
+
+  &-lang {
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: $main-yellow;
+        display: inline-block;
+        border-radius: 50%;
+      }
+
+      .menu-item {
+        display: none;
+
+        a {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 16px;
+          color: $link-gray;
+          transition: 0.3s;
+
+          &:hover {
+            color: $main-yellow;
+          }
+        }
+
+        &.current-menu-item {
+          display: block;
+        }
+      }
+    }
+  }
+}

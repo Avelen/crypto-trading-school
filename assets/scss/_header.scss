@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+
+    @include md {
+        padding: 20px 0;
+    }
+
+    &__logo{
+
+        img{
+            max-width: 100%;
+        }
+
+        @include md {
+            max-width: 150px;
+        }
+    }
+
+    &__arrow {
+        margin-right: auto;
+        margin-left: 135px;
+
+        @include lg {
+            margin-left: 60px;
+        }
+        @include sm {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        position: relative;
+
+        @include md {
+            gap: 20px;
+        }
+    }
+}

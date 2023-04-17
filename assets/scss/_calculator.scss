@@ -1,0 +1,119 @@
+.calculator {
+  background: rgba(255, 255, 255, 0.33);
+  box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4.5px);
+  border-radius: 28px;
+  padding: 40px 40px 20px;
+
+  @include md {
+    padding: 20px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 37px;
+  }
+
+  &__body {
+
+    .input-gruop {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      &__item {
+        width: 50%;
+
+        p {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 8px;
+          line-height: 21px;
+          text-align: center;
+          letter-spacing: 0.646451px;
+          text-transform: uppercase;
+          color: $p-blue;
+        }
+
+        label {
+          width: 100%;
+          display: block;
+          padding: 10px 8px;
+          box-sizing: border-box;
+          position: relative;
+
+          span {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16.2957px;
+            text-transform: uppercase;
+            border-right: 1px solid;
+            position: absolute;
+            padding-right: 3px;
+            top: 15px;
+            left: 15px;
+          }
+
+          input {
+            padding: 4px 4px 4px 57px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16.2957px;
+            box-sizing: border-box;
+            max-width: 100%;
+            text-transform: uppercase;
+            border-radius: 5px;
+          }
+
+          &[for="left-input"] {
+            background: $light-gray-bg;
+            border-radius: 10px 0px 0px 10px;
+
+            span {
+              color: $p-light-blue;
+            }
+
+            input {
+              background: $white;
+            }
+          }
+
+          &[for="right-input"] {
+            background: $main-yellow;
+            border-radius: 0px 10px 10px 0px;
+
+            span {
+              color: $white;
+            }
+
+            input {
+              background: $light-transparent-bg;
+            }
+          }
+        }
+      }
+    }
+
+    .btn-group {
+      text-align: center;
+
+      .btn {
+        padding: 4px 50px;
+        background: $p-blue;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: -0.638567px;
+        color: $white;
+        transition: 0.3s;
+
+        &:hover{
+          background: $p-light-blue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.blue-oval{
+  background: $primary-blue-bg;
+  position: relative;
+
+  &:before{
+    content: "";
+    height: 100px;
+    background: $primary-blue-bg;
+    border-radius: 100%/100%;
+    position: absolute;
+    top: -40px;
+    left: -15px;
+    right: -15px;
+  }
+}
+
+.testimonial{
+
+  &-block{
+    position: relative;
+
+    &:before{
+      content: '';
+      width: 261px;
+      height: 261px;
+      display: block;
+      position: absolute;
+      top: -104px;
+      left: -77px;
+      border-radius: 50%;
+      background: linear-gradient(115.02deg, #6E6EFC -7.85%, #B6B6FD 106.94%);
+    }
+  }
+
+  &__user{
+
+    .elementor-testimonial-wrapper{
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 15px;
+
+      .elementor-testimonial-meta-inner{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+      }
+    }
+  }
+}
